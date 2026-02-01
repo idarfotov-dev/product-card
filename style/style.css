@@ -13,11 +13,12 @@ body {
 }
 
 .wrapper {
-  max-width: 1100px;
+  max-width: 1110px;
   margin: 0 auto;
-  padding: 200px 0 100px;
+  padding: 220px 0 116px;
   background-image: url("../image/dandelions-bg.png");
   background-repeat: no-repeat;
+  background-size: 790px 697px;
 }
 
 
@@ -27,7 +28,7 @@ body {
   font-weight: normal;
   line-height: 78px;
   color: #515076;
-  margin-bottom: 120px;
+  margin-bottom: 110px;
   text-align: center;
 }
 
@@ -36,7 +37,7 @@ body {
   display: flex;
   justify-content: center;
   flex-wrap: wrap;
-  gap: 40px;
+  gap: 45px;
   margin: 0 auto;
 }
 
