@@ -15,15 +15,15 @@ recolorAllCardButton.addEventListener('click', () => {
 });
 
 const openGoogleButton = document.getElementById('open-google-button');
-openGoogleButton.addEventListener('click', openGoogle)
+openGoogleButton.addEventListener('click', openGoogle);
 
 function openGoogle() {
     const answer = confirm('Вы действительно хотите перейти на Google?');
 
     if (answer === true) {
-        window.open('https://www.google.com')
+        window.open('https://www.google.com');
     } else {
-        alert('Пользователь отказался переходить на сайт Google')
+        alert('Пользователь отказался переходить на сайт Google');
     }
 };
 
