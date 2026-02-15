@@ -48,6 +48,29 @@ body {
   font-weight: bold;
 }
 
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 75px;
+  gap: 10px;
+}
+
+.styles-for-buttons {
+  background-color: #515076;
+  transition: all 0.3s ease;
+  color: #F7F7FA;
+  border: none;
+  padding: 12px 24px;
+  border-radius: 8px;
+  font-size: 14px;
+  cursor: pointer;
+}
+
+.multicolored-button {
+  background-color: #9b96ca;
+}
+
 .product-card_main-title {
   font-size: 70px;
   font-style: normal;
@@ -55,6 +78,7 @@ body {
   line-height: 78px;
   margin-bottom: 110px;
   text-align: center;
+  cursor: default;
 }
 
 .product-card_container {
