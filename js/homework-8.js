@@ -45,7 +45,7 @@ function createCards(card) {
         const li = document.createElement("li");
         li.textContent = composition;
         li.classList.add("product-card_list-item");
-        
+
         ul.appendChild(li);
     };
 
@@ -55,7 +55,7 @@ function createCards(card) {
 const count = getCardsCount();
 const visibleCards = productCards.slice(0, count);
 
-for(const productCard of visibleCards) {
+for (const productCard of visibleCards) {
     productCardContainer.appendChild(createCards(productCard));
 };
 
