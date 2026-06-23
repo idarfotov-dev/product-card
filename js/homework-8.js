@@ -25,25 +25,27 @@ const getCardsCount = () => {
 
 function createCards(card) {
     const cardClone = cardTamplate.content.cloneNode(true);
-
+    
+    const type = cardClone.querySelector(".product-card_type");
+    const title = cardClone.querySelector(".product-card_title");
+    const description = cardClone.querySelector(".product-card_description");
+    const price = cardClone.querySelector(".product-card_price");
     const ul = cardClone.querySelector(".product-card_list");
-    const productImage = cardClone.querySelector(".product-card_img");
-    const productType = cardClone.querySelector(".product-card_type");
-    const productTitle = cardClone.querySelector(".product-card_title");
-    const productDescription = cardClone.querySelector(".product-card_description");
-    const productPrice = cardClone.querySelector(".product-card_price");
+    const img = cardClone.querySelector(".product-card_img");
 
-    productImage.src = card.image;
-    productImage.alt = card.title;
-    productType.textContent = card.type;
-    productTitle.textContent = card.title;
-    productDescription.textContent = card.description;
-    productPrice.textContent = card.price;
+    img.src = `image/${card.image}.png`;
+    img.alt = card.title;
 
-    for(const composition of card.cardList) {
+    type.textContent = card.type;
+    title.textContent = card.title;
+    description.textContent = card.description;
+    price.textContent = `${card.price} ₽`;
+
+    for (const composition of card.compositionList) {
         const li = document.createElement("li");
         li.textContent = composition;
         li.classList.add("product-card_list-item");
+        
         ul.appendChild(li);
     };
 
@@ -58,8 +60,7 @@ for(const productCard of visibleCards) {
 };
 
 const arr = productCards.reduce((acc, value) => {
-    acc.push({
-        [value.title]: value.description
-    });
+    acc.push({[value.title]: value.description});
+
     return acc;
 }, []);
