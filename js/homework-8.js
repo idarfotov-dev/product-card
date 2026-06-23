@@ -1,31 +1,24 @@
 import { productCards } from "./productsData.js";
 
-const cardTamplate = document.querySelector("#card-tamplate");
+const cardTemplate = document.querySelector("#card-template");
 const productCardContainer = document.querySelector(".product-card_container");
 
 const getCardsCount = () => {
-    let isValid = false;
-
-    while (!isValid) {
+    while (true) {
         const input = prompt(`Сколько карточек отобразить? От 1 до ${productCards.length}`);
         const cardsCount = Number(input);
 
-        if (
-            !isNaN(cardsCount) &&
-            cardsCount >= 1 &&
-            cardsCount <= productCards.length
-        ) {
-            isValid = true;
+        if (!isNaN(cardsCount) && cardsCount >= 1 && cardsCount <= productCards.length) {
             return cardsCount;
         }
 
         alert(`Введите корректное число от 1 до ${productCards.length}`);
-    };
+    }
 };
 
 function createCards(card) {
-    const cardClone = cardTamplate.content.cloneNode(true);
-    
+    const cardClone = cardTemplate.content.cloneNode(true);
+
     const type = cardClone.querySelector(".product-card_type");
     const title = cardClone.querySelector(".product-card_title");
     const description = cardClone.querySelector(".product-card_description");
@@ -45,9 +38,8 @@ function createCards(card) {
         const li = document.createElement("li");
         li.textContent = composition;
         li.classList.add("product-card_list-item");
-
         ul.appendChild(li);
-    };
+    }
 
     return cardClone;
 }
@@ -55,12 +47,13 @@ function createCards(card) {
 const count = getCardsCount();
 const visibleCards = productCards.slice(0, count);
 
-for (const productCard of visibleCards) {
+visibleCards.forEach(productCard => {
     productCardContainer.appendChild(createCards(productCard));
-};
+});
 
-const arr = productCards.reduce((acc, value) => {
-    acc.push({[value.title]: value.description});
-
+const titleDescriptionsArray = productCards.reduce((acc, value) => {
+    acc.push({ [value.title]: value.description });
     return acc;
 }, []);
+
+console.log(titleDescriptionsArray);
