@@ -58,6 +58,8 @@ modalForm.addEventListener("submit", (event) => {
     user.createdOn = new Date();
     console.log(user);
 
+    modalForm.reset()
+
     overlay.classList.remove("modal-showed");
     body.classList.remove("no-scroll");
 });
