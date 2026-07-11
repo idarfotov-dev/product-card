@@ -10,13 +10,14 @@
     <title>Product Card</title>
 </head>
 <body>
+    <button class="register-button button">Регистрация</button>
     <div class="wrapper">
         <h1 class="product-card_main-title">Выбери свой продукт</h1>
         <div class="buttons-container">
-            <button class="styles-for-buttons" id="recolor-first-card-button">Поменять цвет первой карточки</button>
-            <button class="styles-for-buttons" id="recolor-all-cards-button">Помпнять цвет всех карточек</button>
-            <button class="styles-for-buttons" id="open-google-button">Перейти на сайт Google</button>
-            <button class="styles-for-buttons" id="multicolored-button">Помпнять цвет кнопки</button>
+            <button class="button" id="recolor-first-card-button">Поменять цвет первой карточки</button>
+            <button class="button" id="recolor-all-cards-button">Помпнять цвет всех карточек</button>
+            <button class="button" id="open-google-button">Перейти на сайт Google</button>
+            <button class="button" id="multicolored-button">Помпнять цвет кнопки</button>
         </div>
         <div class="product-card_container">
             <template id="card-template">
@@ -35,10 +36,126 @@
             </template>
         </div>
     </div>
+    <footer class="footer">
+        <div class="footer__container">
+            <section class="footer__about">
+                <h2 class="footer__title">Product Cards</h2>
+                <p class="footer__text">У Нас Самые Лучшие Продукты Для Кожи!</p>
+                <div class="footer__socials">
+                    <a class="footer__icon" href="https://web.telegram.org/"><img src="image/telegram-icon.png" class="socials" alt=""></a>
+                    <a class="footer__icon" href="https://vk.ru/"><img src="image/vk-icon.png" class="socials" alt=""></a>
+                </div>
+            </section>
+            <section class="footer__subscribe">
+                <form class="footer__form">
+                    <label class="footer__label" for="SubscribeToUs">Подпишись на наши акции:</label>
+                    <div class="footer__form-container">
+                        <input 
+                            class="footer__input" 
+                            id="SubscribeToUs" 
+                            type="email" 
+                            name="login"
+                            placeholder="Введи Email..."
+                            required>
+                        <button class="footer__button button" type="submit">Подписаться</button>
+                    </div>
+                </form>
+            </section>
+            <nav class="footer__nav">
+                <h3 class="footer__nav-subtitle">Быстрые ссылки</h3>
+                <ul class="footer__list">
+                    <li class="footer__item"><a class="footer__link" href="#">Главная</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Магазин</a></li>
+                    <li class="footer__item"><a class="footer__link" href="#">Контакты</a></li>
+                </ul>
+            </nav>
+        </div>
+        <div class="footer__bottom">
+            <hr class="footer__line">
+            <p class="footer__copyright">www.product-cards.com © All right reserve</p>
+        </div>
+    </footer>
+    <div class="overlay">
+        <div class="modal">
+            <button class="modal__close" type="button">&times;</button>
+            <h2 class="modal__title">Регистрация</h2>
+            <form class="register-form">
+
+                <div class="register-form__group">
+                    <label class="register-form__label" for="firstName">Имя</label>
+                    <input
+                        class="register-form__input"
+                        id="firstName"
+                        name="firstName"
+                        type="text"
+                        placeholder="Введите имя"
+                        required
+                        minlength="2">
+                </div>
+                <div class="register-form__group">
+                    <label class="register-form__label" for="lastName">Фамилия</label>
+                    <input
+                        class="register-form__input"
+                        id="lastName"
+                        name="lastName"
+                        type="text"
+                        placeholder="Введите фамилию"
+                        required
+                        minlength="2">
+                </div>
+                <div class="register-form__group">
+                    <label class="register-form__label" for="birthDate">Дата рождения</label>
+                    <input
+                        class="register-form__input"
+                        id="birthDate"
+                        name="birthDate"
+                        type="date"
+                        required>
+                </div>
+                <div class="register-form__group">
+                    <label class="register-form__label" for="login">Логин</label>
+                    <input
+                        class="register-form__input"
+                        id="login"
+                        name="login"
+                        type="email"
+                        placeholder="Введите логин"
+                        required
+                        minlength="4">
+                </div>
+                <div class="register-form__group">
+                    <label class="register-form__label" for="password">Пароль</label>
+                    <input
+                        class="register-form__input"
+                        id="password"
+                        name="password"
+                        type="password"
+                        placeholder="Введите пароль"
+                        required
+                        minlength="6"
+                        maxlength="14">
+                </div>
+                <div class="register-form__group">
+                    <label class="register-form__label" for="repeatPassword">Повторите пароль</label>
+                    <input
+                        class="register-form__input"
+                        id="repeatPassword"
+                        name="repeatPassword"
+                        type="password"
+                        placeholder="Повторите пароль"
+                        required
+                        minlength="6"
+                        maxlength="14">
+                </div>
+                <button class="register-form__button button" type="submit">Зарегистрироваться</button>
+            </form>
+        </div>
+    </div>
     <script src="js/main.js"></script>
     <script src="js/homework-5.js"></script>
     <script src="js/homework-6.js"></script>
     <script src="js/homework-7.js" type="module"></script>
     <script src="js/homework-8.js" type="module"></script>
+    <script src="js/homework-9.js"></script>
 </body>
 </html>

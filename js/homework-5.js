@@ -1,8 +1,12 @@
+// Функция выводит город и температуру в консоль
+
 function setCityTemp(city, temperature) {
     console.log(`Сейчас в городе ${city} температура  — ${temperature}°C градусов по Цельсию`);
 }
 
 setCityTemp('Нальчик', '24');
+
+// Сравнение скорости с скоростью света и вывод результата
 
 const SPEED_OF_LIGHT = 299792458;
 
@@ -17,6 +21,8 @@ function checkSpeed(speed) {
 }
 
 checkSpeed(299792458);
+
+// Проверка возможности покупки товара по бюджету
 
 let productName = 'Машина';
 let productPrice = 23000;
