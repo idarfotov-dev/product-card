@@ -42,7 +42,7 @@ const repeatPasswordInput = document.querySelector("#repeatPassword");
 let user;
 
 function checkPasswords() {
-    if(posswordInput.value !== repeatPasswordInput.value) repeatPasswordInput.setCustomValidity("Пароли не совподают!");
+    if (posswordInput.value !== repeatPasswordInput.value) repeatPasswordInput.setCustomValidity("Пароли не совподают!");
     else repeatPasswordInput.setCustomValidity("");
 };
 
