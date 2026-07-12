@@ -3,6 +3,8 @@ import { productCards } from "./productsData.js";
 const cardTemplate = document.querySelector("#card-template");
 const productCardContainer = document.querySelector(".product-card_container");
 
+// Функция запроса количества карточек у пользователя с помощью prompt с проверкой допустимого диапазона (от 1 до 5)
+
 const getCardsCount = () => {
     while (true) {
         const input = prompt(`Сколько карточек отобразить? От 1 до ${productCards.length}`);
@@ -15,6 +17,8 @@ const getCardsCount = () => {
         alert(`Введите корректное число от 1 до ${productCards.length}`);
     }
 };
+
+// Функция рендеринга карточек, которая принимает массив и отображает указанное количество элементов на странице
 
 function createCards(card) {
     const cardClone = cardTemplate.content.cloneNode(true);
@@ -50,6 +54,8 @@ const visibleCards = productCards.slice(0, count);
 visibleCards.forEach(productCard => {
     productCardContainer.appendChild(createCards(productCard));
 });
+
+// Использование reduce для преобразования массива продуктов в объект, где ключ — название продукта, а значение — его описание
 
 const titleDescriptionsArray = productCards.reduce((acc, value) => {
     acc.push({ [value.title]: value.description });

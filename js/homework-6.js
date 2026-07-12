@@ -1,3 +1,5 @@
+// Объект с личными данными пользователя (Имя, возрост, город, работа и т.д)
+
 const userProfile = {
     firstName: 'Idar',
     lastName: 'Fotov',
@@ -9,6 +11,8 @@ const userProfile = {
     maritalStatus: 'Single'
 };
 
+// Объект автомобиля с характеристиками и добавленным владельцем (Объект userProfile)
+
 const car = {
     brand: 'BMW',
     model: '8 Series',
@@ -19,6 +23,8 @@ const car = {
 
 car.carOwner = userProfile;
 
+// Функция проверяет наличие свойства "Максимальная скорость" и добавляет его при отсутствии
+
 function ensureMaxSpeed(obj) {
     if("maxSpeed" in obj) return;
         obj.maxSpeed = 320;
@@ -26,13 +32,19 @@ function ensureMaxSpeed(obj) {
 
 ensureMaxSpeed(car);
 
+// Фунция возвращает значение указанного свойства объекта
+
 function showObjcetValue(object, property) {
     console.log(property);
 }
 
 showObjcetValue(car, car.color);
 
+// Массив названий продуктов
+
 const products = ['milk', 'bread', 'eggs', 'rice', 'apples'];
+
+// Массив книг (Объекты с характеристикаими)
 
 const books = [
     {
@@ -80,6 +92,8 @@ books.push({
     genre: 'classic'
 });
 
+// Второй массив книг одной вселенной и обеъединение двух массивов в один
+
 const marvelBooks = [
     {
         title: 'Spider-Man: Origin',
@@ -105,6 +119,8 @@ const marvelBooks = [
 ];
 
 const library = [...books, ...marvelBooks];
+
+// Функция добаляет свойство isRare в зависимости от года выпуска книги
 
 const updatedLibrary = library.map(book => {
     return {...book, isRare: book.year <= 1950}

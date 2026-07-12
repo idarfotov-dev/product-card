@@ -27,7 +27,8 @@ body {
 .product-card_composition, 
 .product-card_list-item, 
 .product-card_price-text, 
-.product-card_price {
+.product-card_price,
+.modal__title {
   color: #515076;
 }
 
@@ -48,23 +49,27 @@ body {
   font-weight: bold;
 }
 
-.buttons-container {
-  display: flex;
-  justify-content: center;
-  flex-wrap: wrap;
-  margin-bottom: 75px;
-  gap: 10px;
-}
-
-.styles-for-buttons {
+.button {
+  font-size: 14px;
   background-color: #515076;
   transition: all 0.3s ease;
   color: #F7F7FA;
   border: none;
   padding: 12px 24px;
   border-radius: 8px;
-  font-size: 14px;
   cursor: pointer;
+}
+
+.button:hover{
+  background-color:#3f3d63;
+}
+
+.buttons-container {
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin-bottom: 75px;
+  gap: 10px;
 }
 
 .multicolored-button {
@@ -145,4 +150,236 @@ body {
 .product-card_price-block {
   display: flex;
   justify-content: space-between;
+}
+
+.footer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  height: 477px;
+  background:#3A3A3A;
+  color: #FFF;
+  padding: 85px 85px 25px 85px;
+}
+
+.footer__container {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.footer__title {
+  font-size: 28px;
+  margin-bottom: 15px;
+}
+
+.footer__text {
+  font-size: 18px;
+  margin-bottom: 40px;
+}
+
+.footer__socials {
+  display: flex;
+  gap: 30px;
+}
+
+.socials {
+  width: 21px;
+}
+
+.footer__form {
+  text-align: center;
+}
+
+.footer__label {
+  display: block;
+  font-size: 24px;
+  font-weight: 400;
+  margin-bottom: 13px;
+}
+
+.footer__form-container {
+  width: 477px;
+  display: flex;
+  flex-direction: row;
+}
+
+.footer__input,
+.footer__input::placeholder {
+  color: #000000BF;
+  font-family: Montserrat, sans-serif;
+  font-size: 14px;
+  font-weight: 500;
+  font-style: Medium;
+}
+
+.footer__input {
+  width: 65%;
+  padding: 20px 0 20px 35px;
+  border: none;
+  outline: none;
+  border-radius: 10px 0 0 10px;
+}
+
+.footer__button {
+  position: relative;
+  width: 35%;
+  padding: 20px 15px 20px 20px;
+  border: none;
+  background-color:white;
+  color: #000;
+  cursor: pointer;
+  border-radius: 0 10px 10px 0;
+  font-family: Montserrat;
+  font-weight: 500;
+  font-style: Medium;
+  font-size: 18px;
+}
+
+.footer__button:hover {
+  color: #FFF;
+}
+
+.footer__button::before {
+  content: '';
+  position: absolute;
+  width: 1px;
+  height: 18px;
+  border: 1px solid #000;
+  left: 0;
+  top: 22.5px;
+}
+
+.footer__nav-subtitle {
+  font-size: 20px;
+  font-weight: 500;
+  margin-bottom: 23px;
+}
+
+.footer__list {
+  list-style: none;
+}
+
+.footer__item {
+  font-weight: 400;
+  font-size: 18px;
+  letter-spacing: 0%;
+  margin-bottom: 15px;
+}
+
+.footer__link {
+  color:white;
+  text-decoration:none;
+}
+
+.footer__link:hover {
+  color: #9b96ca;
+  transition: all 0.3s ease;
+}
+
+.footer__bottom {
+  align-items: flex-end;
+  text-align:center;
+  margin-top:70px;
+}
+
+.footer__line {
+  width: 66px;
+  margin: 0 auto 30px;
+  border: 1px solid #FFF;
+}
+
+.footer__copyright {
+  font-size: 18px;
+}
+
+.register-button {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  padding:12px 28px;
+  font-size:18px;
+}
+
+.overlay {
+  display: none;
+  position: fixed;
+  inset: 0;
+  background: rgba(0, 0, 0, .55);
+  justify-content: center;
+  align-items: center;
+  z-index: 1000;
+}
+
+.modal-showed {
+  display: flex;
+}
+
+.no-scroll {
+    overflow: hidden;
+}
+
+.modal {
+  position:relative;
+  width:520px;
+  max-width:90%;
+  background:#ffffff;
+  border-radius:12px;
+  padding:35px;
+  box-shadow:0 10px 35px rgba(0,0,0,.25);
+}
+
+.modal__title {
+  text-align:center;
+  margin-bottom:25px;
+}
+
+.modal__close {
+  position:absolute;
+  top:15px;
+  right:18px;
+  border:none;
+  background:none;
+  cursor:pointer;
+  font-size:30px;
+  color:#555;
+}
+
+.modal__close:hover {
+  color:#000;
+}
+
+.register-form {
+  display:flex;
+  flex-direction:column;
+  gap:18px;
+}
+
+.register-form__group {
+  display:flex;
+  flex-direction:column;
+}
+
+.register-form__label {
+  margin-bottom:7px;
+  font-size:15px;
+  color:#444;
+}
+
+.register-form__input {
+  padding:12px;
+  border:1px solid #cfcfcf;
+  border-radius:8px;
+  outline:none;
+  font-size:15px;
+}
+
+.register-form__input:focus {
+  border-color:#515076;
+}
+
+.register-form__button {
+  margin-top:10px;
+  padding:14px;
+  font-size:17px;
 }
